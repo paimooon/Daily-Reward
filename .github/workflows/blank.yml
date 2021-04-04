@@ -1,0 +1,27 @@
+name: "Genshin Impact Attendance"
+
+on:
+  schedule:
+    - cron: "0 16 * * *"  # scheduled at 00:00 (UTC+8) everyday
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+          
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Run check
+        env:
+          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+          COOKIE_TOKEN: ${{ secrets.COOKIE_TOKEN }}
+        run: |
+          pip install genshinstats
+          python3 ./main.py
