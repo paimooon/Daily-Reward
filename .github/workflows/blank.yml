@@ -2,7 +2,7 @@ name: "Genshin Impact Attendance"
 
 on:
   schedule:
-    - cron: "51 0 * * *"  # scheduled at 00:00 (UTC+8) everyday
+    - cron: "51 0 * * *"
   workflow_dispatch:
 
 jobs:
