@@ -1,6 +1,6 @@
 import genshinstats as gs
 import os
-gs.set_cookie(account_id = int(os.environ.get('ACCOUNT_ID')), cookie_token = os.environ.get('COOKIE_TOKEN'))
+gs.set_cookie(account_id = int(os.environ.get('ACCOUNT_ID2')), cookie_token = os.environ.get('COOKIE_TOKEN2'))
 
 info = gs.get_daily_reward_info()
 print('total rewards claimed:',info['total_sign_day'])
