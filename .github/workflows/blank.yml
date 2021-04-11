@@ -27,3 +27,4 @@ jobs:
         run: |
           pip install genshinstats
           python3 ./main.py
+          python3 ./main2.py
