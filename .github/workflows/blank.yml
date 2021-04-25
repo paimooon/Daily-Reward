@@ -20,8 +20,8 @@ jobs:
 
       - name: Run check
         env:
-          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
-          COOKIE_TOKEN: ${{ secrets.COOKIE_TOKEN }}
+          LTUID: ${{ secrets.LTUID }}
+          LTOKEN: ${{ secrets.LTOKEN }}
         run: |
           pip install genshinstats
           python3 ./main.py
