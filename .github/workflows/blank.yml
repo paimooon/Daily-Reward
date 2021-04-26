@@ -2,7 +2,7 @@ name: "Genshin Impact Attendance"
 
 on:
   schedule:
-    - cron: "0 21 * * *"  # scheduled at 00:00 (UTC+8) everyday
+    - cron: "0 16 * * *"  # scheduled at 00:00 (UTC+8) everyday
   workflow_dispatch:
 
 jobs:
@@ -21,9 +21,7 @@ jobs:
       - name: Run check
         env:
           ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
-          ACCOUNT_ID2: ${{ secrets.ACCOUNT_ID2 }}
           COOKIE_TOKEN: ${{ secrets.COOKIE_TOKEN }}
-          COOKIE_TOKEN2: ${{ secrets.COOKIE_TOKEN2 }}
         run: |
           pip install genshinstats
           python3 ./main.py
