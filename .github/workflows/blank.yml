@@ -23,5 +23,5 @@ jobs:
           LTUID: ${{ secrets.LTUID }}
           LTOKEN: ${{ secrets.LTOKEN }}
         run: |
-          pip install genshinstats
+          pip install -r requirements.txt
           python3 ./main.py
