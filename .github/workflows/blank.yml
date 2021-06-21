@@ -2,11 +2,11 @@ name: "Genshin Impact Attendance"
 
 on:
   schedule:
-    - cron: "0 22 * * *"  # scheduled at 00:00 (UTC+8) everyday
-  print('total rewards claimed:',info[1])
-print(gs.claim_daily_reward())
+    - cron: "0 16 * * *"  # scheduled at 00:00 (UTC+8) everyday
+  workflow_dispatch:
+
 jobs:
-  print('total rewards claimed:',info[1])
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,5 +23,5 @@ jobs:
           LTUID: ${{ secrets.LTUID }}
           LTOKEN: ${{ secrets.LTOKEN }}
         run: |
-          pip install genshinstats
+          pip install -r requirements.txt
           python3 ./main.py
