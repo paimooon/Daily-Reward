@@ -3,10 +3,10 @@ name: "Genshin Impact Attendance"
 on:
   schedule:
     - cron: "0 22 * * *"  # scheduled at 00:00 (UTC+8) everyday
-  workflow_dispatch:
-
+  print('total rewards claimed:',info[1])
+print(gs.claim_daily_reward())
 jobs:
-  build:
+  print('total rewards claimed:',info[1])
     runs-on: ubuntu-latest
 
     steps:
