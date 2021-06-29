@@ -1,1 +1,1 @@
-genshinstats==1.4
+requests
